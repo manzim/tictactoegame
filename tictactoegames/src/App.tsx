@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Game from './Components/Game';
 import { Login } from './Components/LoginWindow';
 import { History } from './Components/History';
+import DemoDashBoard from './Components/ProjectDemo/DemoDashBoard';
+import TopBar from './Components/ProjectDemo/TopBar';
 
 function Content() {
   const contentStyle = {
@@ -21,6 +23,7 @@ function Content() {
             <Route path="/gamewindow" exact={true} component={Game} />
             <Route path="/" exact={true} component={Login} />
             <Route path="/history" exact={true} component={History} />
+            <Route path="/dashboard" exact={true} component={DemoDashBoard} />
           </Switch>
         </BrowserRouter>
       </div>
@@ -29,7 +32,14 @@ function Content() {
 }
 
 function AppComponent() {
-  return <Content />
+  return (
+    <div>
+      <Content />
+      
+    {/* <SideBar /> */}
+    </div>
+
+  )
 }
 
 function App() {
