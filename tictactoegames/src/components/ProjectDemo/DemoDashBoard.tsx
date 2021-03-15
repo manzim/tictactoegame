@@ -1,5 +1,6 @@
 import { Card, Divider, Icon, Tag } from '@blueprintjs/core'
 import React from 'react'
+import Chart from './Chart'
 import SideBar from './SideBar'
 import TopBar from './TopBar'
 
@@ -20,8 +21,13 @@ function DemoDashBoard() {
                             <main>
                                 <div className="bp3-card w-100 bg-red br4">
                                     <div className="cf items-center flex">
-                                        <div className="fl w-100 w-60-ns tc">
-                                            <h1>Column One</h1>
+                                        <div className="fl w-100 w-60-ns tc bp3-card mr3">
+                                            <div>
+                                                <Chart />
+                                            </div>
+                                            <div>
+                                                <Chart />
+                                            </div>
                                         </div>
                                         <div className="fl w-100 w-40-ns tc pl2">
                                         <div className="center b mb3 w-100">Select Device <Divider style={{color: "grey"}} /> </div>
@@ -71,6 +77,10 @@ function DemoDashBoard() {
                                                         <Icon icon="graph" color="blue" className="mr1 ml2" iconSize={15} />
                                                         <span className="b blue tc f5 mr3 ml3">54%</span>                                                        
                                                     </div>
+
+                                                    <div className=" cf w-100 flex mb2 center b flex items-center">
+                                                        <Chart />
+                                                    </div>
                                                 </div>
 
                                                 <div className="w-60 ">
@@ -82,6 +92,7 @@ function DemoDashBoard() {
                                                     />
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
