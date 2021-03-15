@@ -1,12 +1,15 @@
 import React from "react";
 
-export function Square({ value, onClick }) {
+import './Game.css'
 
-  const style = value ? `squares ${value}` : `squares`;
-
+type Props = {
+  value: string;
+  onClick: () => void;
+};
+const Square: React.FC<Props> = props => {
   return (
-    <button className={style} onClick={onClick}>
-      {value}
+    <button className="square sqr-btn " onClick={props.onClick}>
+      {props.value}
     </button>
   );
 };
